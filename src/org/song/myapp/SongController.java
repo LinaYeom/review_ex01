@@ -29,37 +29,35 @@ public class SongController {
         String title = sc.next();
 
         for(int i=0; i<list.size(); i++) {
-            if(list.get(i).getTitle() == title) {
+            if(list.get(i).getTitle().equals(title)) {
                 System.out.println(list.get(i));
             }
         }
     }
 
     public void modifyList(List<SongVO> list) {
-        System.out.println("수정하려는 노래 제목을 입력하세요.");
+        System.out.println("수정을 원하시는 노래 제목을 입력하세요");
         String title = sc.next();
 
-        for(SongVO vo: list){
-            if(vo.getTitle() == title){
+        for(SongVO vo : list) {
+            if(vo.getTitle().equals(title)) {
                 System.out.println("변경하실 제목을 입력하세요");
                 vo.setTitle(sc.next());
-                System.out.println("변경하실 가수를 입력하세요");
-                vo.setSinger(sc.next());
-                System.out.println("변경하실 장르를 변경하세요");
-                vo.setGenre(sc.next());
-
             }
         }
     }
 
-    public void deleteList(List<SongVO>list){
-        System.out.println("삭제하실 곡의 제목을 입력하세요");
+    public void deleteList(List<SongVO> list) {
+        System.out.println("삭제하실 곡의 제목을 입력하세요.");
         String title = sc.next();
 
-        for(SongVO vo:list){
-            if(vo.getTitle()==title){
+        for(SongVO vo : list) {
+            if(vo.getTitle().equals(title)) {
                 list.remove(list.indexOf(vo));
             }
         }
     }
+
+
+
 }
