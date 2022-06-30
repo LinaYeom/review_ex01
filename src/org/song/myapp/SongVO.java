@@ -7,7 +7,7 @@ public class SongVO {
     private String singer;
     private String genre;
 
-    public SongVo(String title, String singer, String genre){
+    public SongVO(String title, String singer, String genre){
         this.title = title;
         this.singer = singer;
         this.genre = genre;
